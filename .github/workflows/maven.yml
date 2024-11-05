@@ -36,12 +36,12 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest .
+          docker build -t ${{ secrets.username }}/my-java-app:latest .
       
       # Push the Docker image to Docker Hub
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
+          docker push ${{ secrets.username }}/my-java-app:latest
       
       # Upload artifact (optional, if you still want the JAR file)
       - name: Upload artifact
